@@ -11,13 +11,13 @@ class CategoriesScreen extends StatelessWidget {
       children: DUMMY_CATEGORIES
           .map(
             (catData) => CategoryItem(
-                  catData.id,
-                  catData.title,
-                  catData.color,
-                ),
+              catData.id,
+              catData.title,
+              catData.color,
+            ),
           )
           .toList(),
-      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 200,
         childAspectRatio: 3 / 2,
         crossAxisSpacing: 20,
