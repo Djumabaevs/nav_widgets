@@ -4,20 +4,21 @@ import '../screens/meal_detail_screen.dart';
 import '../models/meal.dart';
 
 class MealItem extends StatelessWidget {
-  final String id;
-  final String title;
-  final String imageUrl;
-  final int duration;
-  final Complexity complexity;
-  final Affordability affordability;
+  final String? id;
+  final String? title;
+  final String? imageUrl;
+  final int? duration;
+  final Complexity? complexity;
+  final Affordability? affordability;
 
-  MealItem(
-      {@required this.id,
-      @required this.title,
-      @required this.imageUrl,
-      @required this.affordability,
-      @required this.complexity,
-      @required this.duration,});
+  MealItem({
+    @required this.id,
+    @required this.title,
+    @required this.imageUrl,
+    @required this.affordability,
+    @required this.complexity,
+    @required this.duration,
+  });
 
   String get complexityText {
     switch (complexity) {
@@ -84,7 +85,7 @@ class MealItem extends StatelessWidget {
                     topRight: Radius.circular(15),
                   ),
                   child: Image.network(
-                    imageUrl,
+                    imageUrl as String,
                     height: 250,
                     width: double.infinity,
                     fit: BoxFit.cover,
@@ -101,7 +102,7 @@ class MealItem extends StatelessWidget {
                       horizontal: 20,
                     ),
                     child: Text(
-                      title,
+                      title!,
                       style: TextStyle(
                         fontSize: 26,
                         color: Colors.white,
