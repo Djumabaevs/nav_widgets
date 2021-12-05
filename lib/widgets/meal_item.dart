@@ -4,12 +4,12 @@ import '../screens/meal_detail_screen.dart';
 import '../models/meal.dart';
 
 class MealItem extends StatelessWidget {
-  final String? id;
-  final String? title;
-  final String? imageUrl;
-  final int? duration;
-  final Complexity? complexity;
-  final Affordability? affordability;
+  final String id;
+  final String title;
+  final String imageUrl;
+  final int duration;
+  final Complexity complexity;
+  final Affordability affordability;
 
   MealItem({
     @required this.id,
@@ -102,7 +102,7 @@ class MealItem extends StatelessWidget {
                       horizontal: 20,
                     ),
                     child: Text(
-                      title!,
+                      title,
                       style: TextStyle(
                         fontSize: 26,
                         color: Colors.white,
